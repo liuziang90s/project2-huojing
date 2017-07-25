@@ -1,0 +1,43 @@
+@charset "UTF-8";
+body, div, span,tbody,thead,a {
+	font-size: 14px;
+}
+a{
+	text-decoration: none;
+}
+/*头部样式开始*/
+.index-head{
+	height: 80px;
+	border: 0px;
+	padding: 0px;
+	overflow: hidden;
+}
+.accordion{
+	text-align: right;
+	height:100%;
+	background:url('../img/webBg.png') no-repeat;
+}
+/*logo样式*/
+.accordion .logo{
+	float: left;
+	margin-left: 10px;
+}
+/*员工信息*/
+.accordion .quit1{
+	float: right;
+	margin-top: 25px;
+	font-size: 15px;
+	font-family: "Adobe 黑体 Std R";
+}
+.accordion .quit2{
+	margin-top: 55px;
+}
+/*头部样式结束*/
+/*菜单栏*/
+#frame_accordion ul li{
+	height: 25px;
+}
+
+#frame_accordion ul li a{
+	color: inherit;
+}

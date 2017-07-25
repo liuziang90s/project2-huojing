@@ -1,0 +1,50 @@
+/*鐧诲綍娉ㄥ唽椤靛紑濮�*/
+body{
+	background: url("../img/pic/city.jpg") no-repeat;
+	background-size: cover;
+	}
+
+/*涓讳綋閮ㄥ垎寮�濮�*/
+.main1{
+	width: 26vw;
+	position: absolute;
+	top:50%;
+	left:50%;
+	margin-top:-16vh;
+	margin-left:-13vw;
+}
+.sign-top{
+	width: 100%;
+	height: 20%;
+	border-radius: 1rem 1rem 0 0;
+	background: rgba(0,0,0,1);
+}
+.sign-top>h1{
+	color: #000066;
+	line-height:9vh;
+	text-align:center;	
+	padding: 0.6em 0 0;
+}
+.sign-middle{
+	width: 16vw;
+	height: 80%;
+	padding: 0 5vw;
+	background-color: rgba(204,204,204,0.9);
+}
+.input-margin{
+	width: 100%;
+	border: 0;
+	padding: 0.8em 0;
+	font-size: 0.6em;
+	margin-top: 1.6em;
+}	
+#fire{
+text-align: center;
+font-family: "Comic Sans MS";
+font-size: 2em;
+color: white;
+text-shadow: 0 0 20px #fefcc9, 10px -10px 30px #feec85, -20px -20px 35px #ffae34, 20px -35px 40px #ec760c, -20px -50px 50px #cd4606, 0 -70px 60px #973716, 10px -80px 70px #451b0e;
+
+}
+/*涓讳綋閮ㄥ垎缁撴潫*/
+/*鐧诲綍娉ㄥ唽椤电粨鏉�*/

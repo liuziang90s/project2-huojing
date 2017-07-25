@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+ <title>自适应显示多个点标记</title>
+ <link rel="stylesheet" href="http://cache.amap.com/lbs/static/main1119.css"/>
+ <style>
+  .info-tip {
+   position: absolute;
+   top: 10px;
+   right: 10px;
+   font-size: 12px;
+   background-color: #fff;
+   height: 35px;
+   text-align: left;
+  }
+ </style>
+ <script src="http://cache.amap.com/lbs/static/es5.min.js"></script>
+ <script src="http://webapi.amap.com/maps?v=1.3&key=fc1237b7d72144b4cdd60a607039d3d0"></script>
+ <script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>
+</head>
+<body>
+<div id="container"></div>
+<div class="button-group">
+ <input id="setFitView" class="button" type="button" value="地图自适应显示"/>
+</div>
+<div class="info-tip">
+ <div id="centerCoord"></div>
+ <div id="tips"></div>
+</div>
+<script>
+
+    var map = new AMap.Map('container', {
+        resizeEnable: true,
+        center: [116.397428, 39.90923],
+        zoom: 13
+    });
+    var lnglats=[//也可以使用LngLat对象
+        [],
+        [116.368904,39.923423,{title:"北京",aaa:"aaaaaaa",weizhi:"fggerger"}],[116.382122,39.921176,{title:"上海",aaa:"bbbb",weizhi:"的日日日日"}],
+        [116.387271,39.922501,{title:"深圳",aaa:"cccccc",weizhi:"隔阂然后"}],[116.398258,39.914600,{title:"广州",aaa:"ddddd",weizhi:"然后和她他如果"}]
+    ];
+    var infoWindow = new AMap.InfoWindow();
+    for(var i = 1, marker; i < lnglats.length; i++){
+        marker=new AMap.Marker({
+            icon: 'http://webapi.amap.com/theme/v1.3/markers/b/mark_r.png',
+            position:lnglats[i],
+            map:map
+        });
+        marker.content="<div> <h1>"+lnglats[i][2].title+"</h1><p>"+lnglats[i][2].aaa+"</p><p>"+lnglats[i][2].weizhi+"</p></div>";
+        //给Marker绑定单击事件i
+        marker.on('click', markerClick);
+    }
+    map.setFitView();
+    function markerClick(e){
+        infoWindow.setContent(e.target.content);
+        infoWindow.open(map, e.target.getPosition());
+    }
+
+</script>
+</body>
+</html>

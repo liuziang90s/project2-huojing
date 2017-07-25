@@ -1,0 +1,32 @@
+@CHARSET "UTF-8";
+th,td{
+	white-space:nowrap;
+		}
+.fenye-a {
+	padding:10px 16px;
+	font-size:18px;
+	line-height:1.3333333;
+	position:relative;
+	float:left;
+	margin-left:-1px;
+	color:#337ab7;
+	text-decoration:none;
+	background-color:#fff;
+	border:1px solid #ddd;
+}
+.fenye-li {
+	display:inline;
+}
+.active {
+	z-index:3;
+	color:#fff;
+	cursor:default;
+	background-color:#337ab7;
+	border-color:#337ab7;
+}
+.disabled {
+	color:#777;
+	cursor:not-allowed;
+	background-color:#fff;
+	border-color:#ddd;
+}
